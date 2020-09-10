@@ -20,7 +20,7 @@ namespace Statistics
     }
     public class StatisticsComputer
     {
-        public static ComputedStats ComputeStatistics(List<float> data)
+        public ComputedStats ComputeStatistics(List<float> data)
         {
             ComputedStats computedValues = new ComputedStats();
             if (data.Count != 0)
