@@ -18,7 +18,7 @@ namespace Statistics
             this.Max = Max;
         }
     }
-    class StatisticsComputer
+    public class StatisticsComputer
     {
         public static ComputedStats ComputeStatistics(List<float> data)
         {
