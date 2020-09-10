@@ -14,11 +14,11 @@ namespace Statistics.Test
         {
             var statsComputer = new StatisticsComputer();
             var computedValues = statsComputer.ComputeStatistics(
-                new List<float> { 1.5, 8.9, 3.2, 4.5 });
+                new List<float> { 1.5F, 8.9f, 3.2F, 4.5F });
             float epsilon = 0.001F;
-            Assert.True(Math.Abs(computedValues.Average - 4.525) <= epsilon);
-            Assert.True(Math.Abs(computedValues.Max - 8.9) <= epsilon);
-            Assert.True(Math.Abs(computedValues.Min - 1.5) <= epsilon);
+            Assert.True(Math.Abs(computedValues.Average - 4.525F) <= epsilon);
+            Assert.True(Math.Abs(computedValues.Max - 8.9F) <= epsilon);
+            Assert.True(Math.Abs(computedValues.Min - 1.5F) <= epsilon);
         }
         [Fact]
         public void ReportsNaNForEmptyInput()
