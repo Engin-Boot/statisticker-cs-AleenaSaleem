@@ -1,6 +1,9 @@
 using System;
 using Xunit;
 using Statistics;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace Statistics.Test
 {
@@ -17,6 +20,7 @@ namespace Statistics.Test
             Assert.True(Math.Abs(computedValues.Max - 8.9) <= epsilon);
             Assert.True(Math.Abs(computedValues.Min - 1.5) <= epsilon);
         }
+        [Fact]
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatisticsComputer();
