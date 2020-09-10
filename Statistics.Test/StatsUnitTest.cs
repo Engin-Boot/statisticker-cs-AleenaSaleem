@@ -14,7 +14,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatisticsComputer();
             var computedValues = statsComputer.ComputeStatistics(
-                new List<___> { 1.5, 8.9, 3.2, 4.5 });
+                new List<float> { 1.5, 8.9, 3.2, 4.5 });
             float epsilon = 0.001F;
             Assert.True(Math.Abs(computedValues.Average - 4.525) <= epsilon);
             Assert.True(Math.Abs(computedValues.Max - 8.9) <= epsilon);
@@ -25,7 +25,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatisticsComputer();
             var computedValues = statsComputer.ComputeStatistics(
-                new List<___> { });
+                new List<float> { });
             Assert.True(float.IsNaN(computedValues.Average));
             Assert.True(float.IsNaN(computedValues.Max));
             Assert.True(float.IsNaN(computedValues.Min));
